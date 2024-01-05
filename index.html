@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        .calcular {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 5px;
+          padding: 10px;
+          background-color: rgb(59, 100, 59);
+          border-radius: 5px;
+        }
+        .calcular button {
+          font-size: 20px;
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+        }
+        .calcular button:hover {
+          background-color: white;
+        }
+        .calcular button:active {
+          background-color: rgb(27, 224, 44);
+        }
+        .calcular input {
+          font-size: 20px;
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          text-align: right;
+        }
+      </style>
+</head>
+<body>
+    <div class="calcular"><input type="text" id="resultado" disabled><button onclick="document.getElementById('resultado').value +='7' ">7</button>
+        <button onclick="document.getElementById('resultado').value +='8' ">8</button>
+        <button onclick="document.getElementById('resultado').value +='/' ">/</button>
+        <button onclick="document.getElementById('resultado').value +='4' ">4</button>
+        <button onclick="document.getElementById('resultado').value +='5' ">5</button>
+        <button onclick="document.getElementById('resultado').value +='6' ">6</button>
+        <button onclick="document.getElementById('resultado').value +='*' ">x</button>
+        <button onclick="document.getElementById('resultado').value +='1' ">1</button>
+        <button onclick="document.getElementById('resultado').value +='2' ">2</button>
+        <button onclick="document.getElementById('resultado').value +='3' ">3</button>
+        <button onclick="document.getElementById('resultado').value +='-' ">-</button>
+        <button onclick="document.getElementById('resultado').value +='0' ">0</button>
+        <button onclick="document.getElementById('resultado').value +='.' ">.</button>
+        <button onclick="document.getElementById('resultado').value ='' ">C</button>
+        <button onclick="document.getElementById('resultado').value +='+' ">+</button>
+        <button onclick="document.getElementById('resultado').value = eval(document.getElementById('resultado').value)">=</button>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>
+
